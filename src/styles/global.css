@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Balthazar", serif;
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: #ffe8cc;
+  color: #fff;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
