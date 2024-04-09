@@ -1,9 +1,9 @@
 .header {
+  align-items: center;
   background-color: #ffd8a8;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 12rem;
+  justify-content: center;
   position: relative;
 }
 
@@ -16,6 +16,20 @@
   padding: 0 1rem;
   position: absolute;
   width: 100%;
+}
+
+.newTask button {
+  align-items: center;
+  background: #eb6a5c;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 0 1rem;
 }
 
 .newTask input {
@@ -31,18 +45,4 @@
 
 .newTask input::placeholder {
   color: #fff;
-}
-
-.newTask button {
-  height: 100%;
-  padding: 0 1rem;
-  background: #eb6a5c;
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1rem;
 }
