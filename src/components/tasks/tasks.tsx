@@ -1,17 +1,6 @@
-import Task from "../task/task";
-import styles from "./tasks.module.css";
-
-interface TaskProps {
-  id: string;
-  title: string;
-  isCompleted: boolean;
-}
-
-interface Props {
-  tasks: TaskProps[];
-  onToggleTask: (id: string) => void;
-  onDelete: (id: string) => void;
-}
+import styles from "./Tasks.module.css";
+import Task from "../task/Task";
+import { Props } from "../../typeScriptProps/Props";
 
 export default function Tasks({ tasks, onToggleTask, onDelete }: Props) {
   const taskQuantity = tasks.length;

@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-import Header from "./components/header/header";
-import Tasks from "./components/tasks/tasks";
-
-interface Task {
-  id: string;
-  title: string;
-  isCompleted: boolean;
-}
+import Header from "./components/header/Header";
+import Tasks from "./components/tasks/Tasks";
+import { TasksProps } from "./typeScriptProps/Props";
 
 const LOCAL_STORAGE_KEY = "todo:savedTasks";
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<TasksProps[]>([]);
 
   function loadTasks() {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -24,7 +19,7 @@ function App() {
     loadTasks();
   }, []);
 
-  function setTasksAndSave(newTasks: Task[]) {
+  function setTasksAndSave(newTasks: TasksProps[]) {
     setTasks(newTasks);
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
   }

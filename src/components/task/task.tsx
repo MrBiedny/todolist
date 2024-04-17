@@ -1,16 +1,7 @@
 import { CiTrash } from "react-icons/ci";
-import styles from "./task.module.css";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-
-interface TaskProps {
-  task: {
-    id: string;
-    title: string;
-    isCompleted: boolean;
-  };
-  onToggleTask: (id: string) => void;
-  onDelete: (id: string) => void;
-}
+import styles from "./Task.module.css";
+import { TaskProps } from "../../typeScriptProps/Props";
 
 export default function Task({ task, onToggleTask, onDelete }: TaskProps) {
   return (

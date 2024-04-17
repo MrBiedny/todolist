@@ -1,11 +1,8 @@
-import { CiCirclePlus } from "react-icons/ci";
-import logo from "../../assets/logo.svg";
-import styles from "./header.module.css";
 import { useState } from "react";
-
-interface HeaderProps {
-  onAddTask: (title: string) => void;
-}
+import { CiCirclePlus } from "react-icons/ci";
+import styles from "./Header.module.css";
+import logo from "../../assets/logo.svg";
+import { HeaderProps } from "../../typeScriptProps/Props";
 
 export default function Header({ onAddTask }: HeaderProps) {
   const [title, setTitle] = useState("");
@@ -25,7 +22,6 @@ export default function Header({ onAddTask }: HeaderProps) {
   return (
     <header className={styles.header}>
       <img src={logo} style={{ height: "6rem", width: "6rem" }} />
-
       <form className={styles.newTask} onSubmit={handleSubmit}>
         <input
           type="text"
